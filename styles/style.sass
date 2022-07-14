@@ -14,6 +14,8 @@ $orange: #FCB500
 header
   background: $black
   height: 80px
+  position: relative
+  z-index: 5
   ul
     display: flex
     align-items: center
@@ -46,6 +48,14 @@ header
   position: absolute
   left: 21px
   bottom: -6px
+
+.separation
+  height: 97px
+  position: absolute
+  z-index: 2
+  top: 9px
+  background-image: url(../img/separation.png)
+  background-size: 100%
 
 .startPage_wrapper
   height: 792px
@@ -103,3 +113,105 @@ h2
 #startPage_imgs-ginger
   bottom: 15px
   left: -66px
+
+.salePage_wrapper
+  background: $black
+  height: 926px
+
+.salePage
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  align-items: center
+
+h3
+  font-size: 48px
+  font-weight: 700
+  line-height: 57px
+  text-align: center
+  color: $orange
+  width: 800px
+  margin-top: 112px
+  &:first-line
+    color: $white
+
+.salePage_price
+  display: flex
+  align-items: center
+  width: 270px
+  justify-content: space-between
+  margin-top: 77px
+
+.salePage_price-old
+  color: $grey
+  font-size: 36px
+  line-height: 43px
+  text-align: center
+  text-decoration: 3px $grey line-through
+  margin-left: 20px
+
+.salePage_price-new
+  color: $white
+  font-size: 48px
+  line-height: 57px
+  text-align: left
+
+.salePage_info
+  display: flex
+  justify-content: space-between
+  width: 1087px
+  align-items: center
+  margin-top: 49px
+
+.salePage_info-item
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+#salePage_info-ginger
+  width: 193px
+  height: 161px
+  margin-top: -8px
+
+#salePage_info-ginger-text1
+  padding-right: 6px
+
+#salePage_info-nootris
+  width: 480px
+  height: 160px
+  margin-bottom: -49px
+
+#salePage_info-virus
+  width: 192px
+  height: 160px
+
+#salePage_info-nootris-text1
+  font-size: 36px
+  line-height: 43px
+  text-align: left
+  margin-top: 95px
+  margin-right: 10px
+
+#salePage_info-nootris-text2
+  font-size: 24px
+  line-height: 28px
+  text-align: center
+  margin-top: 8px
+
+.salePage_info-item-text1
+  color: $white
+  text-align: center
+  margin-top: 86px
+
+.salePage_info-item-text2
+  color: $orange
+  text-align: center
+
+button
+  height: 56px
+  width: 256px
+  border-radius: 7px
+  background: $orange
+  line-height: 21.33px
+  margin-top: 66px
