@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
 * {
@@ -56,6 +57,55 @@ a {
   position: absolute;
   left: 21px;
   bottom: -6px;
+}
+
+.header_menu-btn {
+  display: none;
+}
+
+.header_menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  right: 20px;
+  top: 5px;
+}
+.header_menu-btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  transition: all 0.5s;
+}
+
+.header_menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+
+.header_menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+/* Меню, которое будет появляться */
+/* Меняем гамбургер иконку, когда меню открыто */
+.header_menu-btn.active span:nth-of-type(1) {
+  top: 50%;
+  transform: translate(-90%, 0%) rotate(90deg);
+}
+
+.header_menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(90deg);
+}
+
+.header_menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-10%, 0%) rotate(90deg);
 }
 
 .separation {
@@ -313,6 +363,84 @@ button:active {
   }
 }
 /* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+  }
+  .header {
+    width: 720px;
+  }
+  .header_basket {
+    left: 230px;
+  }
+  .startPage {
+    width: 740px;
+  }
+  .header_menu-btn {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  h1 {
+    font-size: 100px;
+    text-align: center;
+  }
+  #startPage_imgs-lemon {
+    left: 76px;
+    top: 614px;
+    width: 266px;
+    height: 232px;
+  }
+  #startPage_imgs-nootris {
+    bottom: -24px;
+    left: 272px;
+    width: 112px;
+    height: 318px;
+  }
+  #startPage_imgs-ginger {
+    bottom: -15px;
+    left: 184px;
+    width: 248px;
+    height: 204px;
+  }
+  .startPage_info-textH1 {
+    width: 500px;
+    padding-left: 35px;
+  }
+  .startPage_info-textH2, h2 {
+    padding-left: 35px;
+  }
+  h2 {
+    margin-top: 95px;
+  }
+  h3 {
+    font-size: 35px;
+    width: 620px;
+  }
+  .salePage_wrapper {
+    height: 1175px;
+  }
+  .salePage_price {
+    margin-bottom: 20px;
+  }
+  .salePage_info {
+    flex-wrap: wrap;
+    width: 500px;
+  }
+  #salePage_info-nootris-text1 {
+    margin-top: 85px;
+  }
+  .salePage_info div:nth-child(2) {
+    order: -1;
+    margin-bottom: 50px;
+  }
+  .salePage_info-item-text1 {
+    margin-top: 20px;
+  }
+}
 /* Landscape phones and portrait tablets */
 /* Portrait phones and smaller */
 /* Iphone 5 */
