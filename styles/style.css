@@ -58,8 +58,10 @@ header ul {
   position: absolute;
   z-index: 2;
   top: 9px;
-  background-image: url(../img/separation.png);
-  background-size: 100%;
+}
+.separation img {
+  width: 99vw;
+  height: 97px;
 }
 
 .startPage_wrapper {
