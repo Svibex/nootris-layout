@@ -1,1 +1,48 @@
 @import "reset.css"
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap')
+
+$white: #FFFFFF
+$black: #111111
+$yellow: #FCDA28
+$grey: #ADADAD
+$orange: #FCB500
+
+*
+  font-family: "Rubik", sans-serif
+  font-size: 18px
+
+header
+  background: $black
+  height: 80px
+  ul
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 956px
+
+.header
+  margin: 0 auto
+  height: 80px
+  width: 1296px
+  color: $white
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.header_basket
+  position: relative
+
+.header_basket__quantity
+  background: $orange
+  color: $black
+  width: 16px
+  height: 16px
+  border-radius: 8px
+  font-size: 12px
+  font-weight: 700
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  left: 21px
+  bottom: -6px
