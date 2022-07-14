@@ -10,7 +10,6 @@ $orange: #FCB500
 *
   font-family: "Rubik", sans-serif
   font-size: 18px
-  border: 1px solid red
 
 header
   background: $black
@@ -504,20 +503,21 @@ button
   button
     margin-top: 85px
 
-@media (max-width: 320px)
+@media (max-width: 479px)
   header
     position: fixed
     z-index: 10
     width: 100%
 
   .header
-    width: 420px
+    width: 300px
 
   .header_basket
-    left: 130px
+    left: 30px
 
   .startPage
-    width: 450px
+    width: 300px
+    justify-content: center
 
   .header_menu-btn
     display: block
@@ -526,31 +526,31 @@ button
     display: none
 
   .startPage_wrapper
-    height: 985px
+    height: 900px
 
   h1
-    font-size: 60px
+    font-size: 40px
     text-align: center
-    line-height: 70px
+    line-height: 60px
     margin-top: 150px
 
   #startPage_imgs-lemon
-    left: 49px
-    top: 604px
-    width: 266px
-    height: 232px
+    left: 166px
+    top: 519px
+    width: 178px
+    height: 154px
 
   #startPage_imgs-nootris
     bottom: 226px
-    left: 244px
-    width: 112px
-    height: 318px
+    left: 285px
+    width: 75px
+    height: 212px
 
   #startPage_imgs-ginger
-    bottom: 234px
-    left: 157px
-    width: 248px
-    height: 204px
+    bottom: 247px
+    left: 224px
+    width: 165px
+    height: 137px
 
   .startPage_info
     display: flex
@@ -558,19 +558,25 @@ button
     align-items: center
 
   .startPage_info-textH1, .startPage_info-textH2, h2
-    width: 400px
+    width: 300px
     text-align: center
     margin: 10px 0
 
+  .startPage_info-textH1
+    font-size: 17px
+    margin-top: 30px
+
   h2
-    margin-top: 450px
+    margin-top: 288px
 
   h3
-    font-size: 26px
-    width: 440px
+    font-size: 17px
+    width: 300px
+    line-height: 30px
+    margin-top: 75px
 
   .salePage_wrapper
-    height: 1175px
+    height: 1250px
 
   .salePage_price
     margin-bottom: 20px
@@ -578,11 +584,18 @@ button
 
   .salePage_info
     flex-wrap: wrap
-    width: 400px
+    width: 300px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .salePage_info-item
+    margin-bottom: 45px
 
   #salePage_info-nootris-text1
-    margin-top: 85px
-    font-size: 34px
+    margin: 75px 0 0
+    font-size: 25px
+    text-align: center
 
   .salePage_info div:nth-child(2)
     order: -1
@@ -591,9 +604,12 @@ button
   .salePage_info-item-text1
     margin-top: 20px
 
+  #salePage_info-virus-text1
+    margin-top: 10px
+
   #salePage_info-nootris
-    width: 320px
-    height: 107px
+    width: 299px
+    height: 100px
 
   button
-    margin-top: 85px
+    margin-top: 50px
