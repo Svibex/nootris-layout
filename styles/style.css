@@ -3,6 +3,7 @@
 * {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
+  border: 1px solid red;
 }
 
 header {
@@ -17,6 +18,10 @@ header ul {
   justify-content: space-between;
   width: 956px;
   padding-left: 13px;
+}
+
+a {
+  color: #FFFFFF;
 }
 
 .header {
@@ -60,7 +65,7 @@ header ul {
   top: 9px;
 }
 .separation img {
-  width: 99vw;
+  width: 100%;
   height: 97px;
 }
 
@@ -251,5 +256,65 @@ button {
   line-height: 21.33px;
   margin-top: 66px;
 }
+button:hover {
+  background: #FCDA28;
+}
+button:active {
+  transform: scale(1.1);
+}
+
+@media (min-width: 992px) and (max-width: 1391px) {
+  .header {
+    width: 960px;
+  }
+  .header ul {
+    width: 770px;
+    padding: 0;
+  }
+  .header ul li {
+    font-size: 16px;
+  }
+  .header_basket-img {
+    margin: 0;
+  }
+  .startPage {
+    width: 960px;
+  }
+  h1 {
+    font-size: 95px;
+  }
+  .startPage_info-textH1 {
+    font-size: 18px;
+    line-height: 28px;
+    width: 495px;
+    margin-top: 15px;
+  }
+  .startPage_info-textH1, .salePage_info-text2 {
+    font-size: 16px;
+  }
+  h2 {
+    margin-top: 90px;
+    font-size: 34px;
+  }
+  #startPage_imgs-ginger {
+    bottom: -19px;
+    left: -60px;
+  }
+  #startPage_imgs-nootris {
+    bottom: -35px;
+    left: 140px;
+  }
+  #startPage_imgs-lemon {
+    left: -252px;
+    top: 448px;
+  }
+  .salePage_info {
+    width: 960px;
+  }
+}
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
+/* Iphone 5 */
 
 /*# sourceMappingURL=style.css.map */
