@@ -4,100 +4,99 @@
     <meta charset="UTF-8">
     <title>Nootris</title>
     <link rel="stylesheet" href="styles/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" href="img/virus.png"/>
+    <meta name="viewport" content="width=device-width">
 </head>
 <body>
-    <header>
-        <section class="header">
-            <div class="header_menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+<header>
+    <div class="header">
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <div class="navListWrapper">
+            <ul class="navList">
+                <li class="navList__item">FAQ</li>
+                <li class="navList__item">Оплата и доставка</li>
+                <li class="navList__item">Возврат</li>
+                <li class="navList__item">Исследования</li>
+                <li class="navList__item">Личный кабинет</li>
+                <li class="navList__item">
+                    <a class="navList__link" href="tel:888006000990">
+                        8 (800) 600-09-90
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="basket">
+            <img class="basket__img" src="img/basket.png" alt="basket">
+            <div class="basket__quantity">1</div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="separation">
+        <img class="separation__img" src="img/separation.png" alt="">
+    </div>
+    <section class="startPageWrapper">
+        <div class="startPage">
+            <div class="startPage__info">
+                <h1 class="startPage__infoTitle">АКТИВИРУЙ ИММУНИТЕТ!</h1>
+                <p class="startPage__infoText1">Всего пять секунд в день помогут укрепить иммунитет
+                    и повысить защитные силы организма</p>
+                <h2 class="startPage__infoSubtitle">NOOTRIS ПОМОГАЕТ</h2>
+                <p class="startPage__infoText2">Вашему организму во время пандемии
+                    и сезонных простуд</p>
             </div>
-            <div class="header_logo">
-                <img src="img/logo.png" alt="logo">
+            <div class="startPage__images">
+                <img id="ginger" src="img/ginger.png" alt="ginger">
+                <img id="nootris" src="img/nootris.png" alt="nootris">
+                <img id="lemon" src="img/lemon.png" alt="lemon">
             </div>
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li>FAQ</li>
-                        <li>Оплата и доставка</li>
-                        <li>Возврат</li>
-                        <li>Исследования</li>
-                        <li>Личный кабинет</li>
-                        <li>
-                            <a href="tel:888006000990">
-                                8 8 (800) 600-09-90
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+        </div>
+    </section>
+    <section class="salePageWrapper">
+        <div class="salePage">
+            <h3 class="salePage__title">
+                ПОЛУЧИ ЗАЩИТУ ИММУНИТЕТА СО СКИДКОЙ -15% ПЕРВЫМ!
+            </h3>
+            <div class="salePage__price">
+                <p class="salePage__oldPrice">750₽</p>
+                <p class="salePage__newPrice">690₽</p>
             </div>
-            <div class="header_basket">
-                <img class="header_basket-img" src="img/basket.png" alt="basket">
-                <div class="header_basket__quantity">1</div>
-            </div>
-        </section>
-    </header>
-    <main>
-        <section class="separation">
-            <img src="img/separation.png" alt="">
-        </section>
-        <section class="startPage_wrapper">
-            <div class="startPage">
-                <div class="startPage_info">
-                    <h1>АКТИВИРУЙ ИММУНИТЕТ!</h1>
-                    <p class="startPage_info-textH1">Всего пять секунд в день помогут укрепить иммунитет
-                        и повысить защитные силы организма</p>
-                    <h2>NOOTRIS ПОМОГАЕТ</h2>
-                    <p class="startPage_info-textH2">Вашему организму во время пандемии
-                        и сезонных простуд</p>
+            <div class="salePage__info">
+                <div class="salePage__infoItem">
+                    <img id="salePageGinger" src="img/ginger.png" alt="ginger">
+                    <p class="salePage__infoItemText1" id="salePage__info__item__ginger__text1">
+                        Содержит
+                    </p>
+                    <p class="salePage__infoItemText2">имбирь</p>
                 </div>
-                <div class="startPage_imgs">
-                    <img id="startPage_imgs-ginger" src="img/ginger.png" alt="ginger">
-                    <img id="startPage_imgs-nootris" src="img/nootris.png" alt="nootris">
-                    <img id="startPage_imgs-lemon" src="img/Lemon.png" alt="lemon">
+                <div class="salePage__infoItem">
+                    <img id="salePageNootris" src="img/nootris_footer.png" alt="nootris">
+                    <p class="salePage__infoItemText1" id="salePage__info__item__nootris__text1">
+                        + Бесплатная доставка
+                    </p>
+                    <p class="salePage__infoItemText2" id="salePage__info__item__nootris__text2">
+                        Специальная цена
+                    </p>
+                </div>
+                <div class="salePage__infoItem">
+                    <img id="salePageVirus" src="img/virus.png" alt="virus">
+                    <p class="salePage__infoItemText1" id="salePage_info__item__virus__text1">
+                        Нейтрализует
+                    </p>
+                    <p class="salePage__infoItemText2">вирусы</p>
                 </div>
             </div>
-        </section>
-        <section class="salePage_wrapper">
-            <div class="salePage">
-                <h3>
-                    ПОЛУЧИ ЗАЩИТУ ИММУНИТЕТА СО СКИДКОЙ -15% ПЕРВЫМ!
-                </h3>
-                <div class="salePage_price">
-                    <p class="salePage_price-old">750₽</p>
-                    <p class="salePage_price-new">690₽</p>
-                </div>
-                <div class="salePage_info">
-                    <div class="salePage_info-item">
-                        <img id="salePage_info-ginger" src="img/ginger.png" alt="ginger">
-                        <p class="salePage_info-item-text1" id="salePage_info-ginger-text1">
-                            Содержит
-                        </p>
-                        <p class="salePage_info-item-text2">имбирь</p>
-                    </div>
-                    <div class="salePage_info-item">
-                        <img id="salePage_info-nootris" src="img/nootris_footer.png" alt="nootris">
-                        <p class="salePage_info-item-text1" id="salePage_info-nootris-text1">
-                            + Бесплатная доставка
-                        </p>
-                        <p class="salePage_info-item-text2" id="salePage_info-nootris-text2">
-                            Специальная цена
-                        </p>
-                    </div>
-                    <div class="salePage_info-item">
-                        <img id="salePage_info-virus" src="img/vorus.png" alt="virus">
-                        <p class="salePage_info-item-text1" id="salePage_info-virus-text1">
-                            Нейтрализует
-                        </p>
-                        <p class="salePage_info-item-text2">вирусы</p>
-                    </div>
-                </div>
-                <button>Оформить заказ!</button>
-            </div>
-        </section>
-    </main>
-    <script src="script.js"></script>
+            <button  class="salePage__button">Оформить заказ!</button>
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
 </body>
 </html>

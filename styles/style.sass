@@ -7,6 +7,16 @@ $yellow: #FCDA28
 $grey: #ADADAD
 $orange: #FCB500
 
+@mixin flexible ()
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin flex-space-between ()
+  display: flex
+  justify-content: space-between
+  align-items: center
+
 *
   font-family: "Rubik", sans-serif
   font-size: 18px
@@ -19,62 +29,18 @@ header
   height: 80px
   position: relative
   z-index: 10
-  ul
-    display: flex
-    align-items: center
-    justify-content: space-between
-    width: 956px
-    padding-left: 13px
-    li:hover
-      color: $yellow
-      cursor: pointer
-
-a
-  color: $white
-  &:hover
-    color: $yellow
-    cursor: pointer
 
 .header
   margin: 0 auto
   height: 80px
   width: 1310px
   color: $white
-  display: flex
-  justify-content: space-between
-  align-items: center
+  @include flex-space-between ()
 
-.header_logo
-  position: relative
-  z-index: 10
-
-.header_basket
-  position: relative
-
-.header_basket-img
-  margin-right: 22px
-  &:hover
-    cursor: pointer
-
-.header_basket__quantity
-  background: $orange
-  color: $black
-  width: 16px
-  height: 16px
-  border-radius: 8px
-  font-size: 12px
-  font-weight: 700
-  display: flex
-  align-items: center
-  justify-content: center
-  position: absolute
-  left: 21px
-  bottom: -6px
-
-.header_menu-btn
+.burger
   display: none
 
-.header_menu-btn
+.burger
   width: 30px
   height: 30px
   position: relative
@@ -90,42 +56,88 @@ a
     transform: translate(-50%, -50%)
     background-color: $white
     transition: all 0.5s
+  &:hover
+    cursor: pointer
 
-.header_menu-btn span:nth-of-type(2)
+.burger span:nth-of-type(2)
   top: calc(50% - 5px)
 
-.header_menu-btn span:nth-of-type(3)
+.burger span:nth-of-type(3)
   top: calc(50% + 5px)
 
-.menu.active
-  transform: translateX(0)
-
-.menu li
-  list-style-type: none
-
-/* Меняем гамбургер иконку, когда меню открыто */
-.header_menu-btn.active span:nth-of-type(1)
+.burger.active span:nth-of-type(1)
   top: 50%
   transform: translate(-90%, 0%) rotate(90deg)
 
-.header_menu-btn.active span:nth-of-type(2)
+.burger.active span:nth-of-type(2)
   top: 50%
   transform: translate(-50%, 0%) rotate(90deg)
 
-.header_menu-btn.active span:nth-of-type(3)
+.burger.active span:nth-of-type(3)
   top: 50%
   transform: translate(-10%, 0%) rotate(90deg)
+
+.logo
+  position: relative
+  z-index: 10
+  &:hover
+    cursor: pointer
+
+.navListWrapper.active
+  transform: translateX(0)
+
+.navList__item
+  list-style-type: none
+
+.navList
+  @include flex-space-between ()
+  width: 956px
+  padding-left: 13px
+
+.navList__item:hover
+  color: $yellow
+  cursor: pointer
+
+.navList__link
+  color: $white
+  &:hover
+    color: $yellow
+    cursor: pointer
+
+.basket
+  position: relative
+  &:hover
+    cursor: pointer
+
+.basket__img
+  margin-right: 22px
+
+.basket__quantity
+  background: $orange
+  color: $black
+  width: 16px
+  height: 16px
+  border-radius: 8px
+  font-size: 12px
+  font-weight: 700
+  @include flexible ()
+  position: absolute
+  left: 21px
+  bottom: -6px
 
 .separation
   height: 97px
   position: absolute
   z-index: 2
   top: 9px
-  img
-    width: 100%
-    height: 97px
+  left: 0
+  right: 0
 
-.startPage_wrapper
+.separation__img
+  width: 100%
+  height: 97px
+
+.startPageWrapper
   height: 792px
   background: $yellow
 
@@ -134,7 +146,7 @@ a
   width: 1314px
   display: flex
 
-h1
+.startPage__infoTitle
   font-size: 144px
   font-weight: 700
   line-height: 152px
@@ -144,45 +156,44 @@ h1
   z-index: 5
   position: relative
 
-.startPage_info-textH1
+.startPage__infoText1
   font-size: 24px
   font-weight: 400
   line-height: 28px
   width: 657px
   margin-top: 30px
 
-h2
+.startPage__infoSubtitle
   font-size: 36px
   font-weight: 700
   line-height: 43px
   margin-top: 109px
 
-.startPage_info-textH2
+.startPage__infoText2
   line-height: 21px
   width: 350px
   margin-top: 8px
 
-.startPage_imgs
+.startPage__images
   position: relative
   right: 430px
 
-#startPage_imgs-lemon, #startPage_imgs-nootris,
-#startPage_imgs-ginger
+#lemon, #nootris, #ginger
   position: absolute
 
-#startPage_imgs-lemon
+#lemon
   left: -283px
   top: 441px
 
-#startPage_imgs-nootris
+#nootris
   bottom: -1px
   left: 108px
 
-#startPage_imgs-ginger
+#ginger
   bottom: 15px
   left: -66px
 
-.salePage_wrapper
+.salePageWrapper
   background: $black
   height: 926px
 
@@ -192,7 +203,7 @@ h2
   flex-direction: column
   align-items: center
 
-h3
+.salePage__title
   font-size: 48px
   font-weight: 700
   line-height: 57px
@@ -203,14 +214,12 @@ h3
   &:first-line
     color: $white
 
-.salePage_price
-  display: flex
-  align-items: center
+.salePage__price
+  @include flex-space-between ()
   width: 270px
-  justify-content: space-between
   margin-top: 77px
 
-.salePage_price-old
+.salePage__oldPrice
   color: $grey
   font-size: 36px
   line-height: 43px
@@ -218,65 +227,61 @@ h3
   text-decoration: 3px $grey line-through
   margin-left: 20px
 
-.salePage_price-new
+.salePage__newPrice
   color: $white
   font-size: 48px
   line-height: 57px
   text-align: left
 
-.salePage_info
-  display: flex
-  justify-content: space-between
+.salePage__info
+  @include flex-space-between ()
   width: 1087px
-  align-items: center
   margin-top: 49px
 
-.salePage_info-item
-  display: flex
+.salePage__infoItem
+  @include flexible ()
   flex-direction: column
-  align-items: center
-  justify-content: center
 
-#salePage_info-ginger
+#salePageGinger
   width: 193px
   height: 161px
   margin-top: -8px
 
-#salePage_info-ginger-text1
+#salePage__info__item__ginger__text1
   padding-right: 6px
 
-#salePage_info-nootris
+#salePageNootris
   width: 480px
   height: 160px
   margin-bottom: -49px
 
-#salePage_info-virus
+#salePageVirus
   width: 192px
   height: 160px
 
-#salePage_info-nootris-text1
+#salePage__info__item__nootris__text1
   font-size: 36px
   line-height: 43px
   text-align: left
   margin-top: 95px
   margin-right: 10px
 
-#salePage_info-nootris-text2
+.salePage__infoItemText1
+  color: $white
+  text-align: center
+  margin-top: 86px
+
+.salePage__infoItemText2
+  color: $orange
+  text-align: center
+
+#salePage__info__item__nootris__text2
   font-size: 24px
   line-height: 28px
   text-align: center
   margin-top: 8px
 
-.salePage_info-item-text1
-  color: $white
-  text-align: center
-  margin-top: 86px
-
-.salePage_info-item-text2
-  color: $orange
-  text-align: center
-
-button
+.salePage__button
   height: 56px
   width: 256px
   border-radius: 7px
@@ -291,50 +296,51 @@ button
 @media (min-width: 992px) and (max-width: 1391px)
   .header
     width: 960px
-    ul
-      width: 770px
-      padding: 0
-      li
-        font-size: 16px
 
-  .header_basket-img
+  .navList
+    width: 770px
+    padding: 0
+
+  .navList__item
+    font-size: 16px
+
+  .basket__img
     margin: 0
 
   .startPage
     width: 960px
 
-  h1
+  .startPage__infoTitle
     font-size: 95px
 
-  .startPage_info-textH1
+  .startPage__infoText1
     font-size: 18px
     line-height: 28px
     width: 495px
     margin-top: 15px
 
-  .startPage_info-textH1, .salePage_info-text2
+  .startPage__infoText1, .startPage__infoText2
     font-size: 16px
 
-  h2
+  .startPage__infoSubtitle
     margin-top: 90px
     font-size: 34px
 
-  #startPage_imgs-ginger
+  #ginger
     bottom: -19px
     left: -60px
 
-  #startPage_imgs-nootris
+  #nootris
     bottom: -35px
     left: 140px
 
-  #startPage_imgs-lemon
+  #lemon
     left: -252px
     top: 448px
 
-  .salePage_info
+  .salePage__info
     width: 960px
 
-/* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
   header
     position: fixed
@@ -345,8 +351,7 @@ button
     width: 720px
     justify-content: space-between
 
-  /* Меню, которое будет появляться */
-  .menu
+  .navListWrapper
     position: fixed
     top: 0
     width: 320px
@@ -356,7 +361,7 @@ button
     transition: transform 0.5s
     left: 0
 
-  ul
+  .navList
     flex-direction: column
     font-weight: 700
     position: relative
@@ -367,63 +372,63 @@ button
   .startPage
     width: 740px
 
-  .header_menu-btn
+  .burger
     display: block
 
-  h1
+  .startPage__infoTitle
     font-size: 100px
     text-align: center
 
-  #startPage_imgs-lemon
+  #lemon
     left: 76px
     top: 614px
     width: 266px
     height: 232px
 
-  #startPage_imgs-nootris
+  #nootris
     bottom: -24px
     left: 272px
     width: 112px
     height: 318px
 
-  #startPage_imgs-ginger
+  #ginger
     bottom: -15px
     left: 184px
     width: 248px
     height: 204px
 
-  .startPage_info-textH1
+  .startPage__infoText1
     width: 500px
     padding-left: 35px
 
-  .startPage_info-textH2, h2
+  .startPage__infoText2, .startPage__infoSubtitle
     padding-left: 35px
 
-  h2
+  .startPage__infoSubtitle
     margin-top: 95px
 
-  h3
+  .salePage__title
     font-size: 35px
     width: 620px
 
-  .salePage_wrapper
+  .salePageWrapper
     height: 1175px
 
-  .salePage_price
+  .salePage__price
     margin-bottom: 20px
 
-  .salePage_info
+  .salePage__info
     flex-wrap: wrap
     width: 500px
 
-  #salePage_info-nootris-text1
+  #salePage__info__nootris__text1
     margin-top: 85px
 
-  .salePage_info div:nth-child(2)
+  .salePage__info div:nth-child(2)
     order: -1
     margin-bottom: 50px
 
-  .salePage_info-item-text1
+  .salePage__infoItemText1
     margin-top: 20px
 
 @media (min-width: 480px) and (max-width: 767px)
@@ -435,8 +440,7 @@ button
   .header
     width: 420px
 
-  /* Меню, которое будет появляться */
-  .menu
+  .navListWrapper
     position: fixed
     top: 0
     width: 320px
@@ -449,10 +453,10 @@ button
   .startPage
     width: 450px
 
-  .header_menu-btn
+  .burger
     display: block
 
-  ul
+  .navList
     flex-direction: column
     font-weight: 700
     position: relative
@@ -460,77 +464,78 @@ button
     top: 115px
     line-height: 75px
 
-  .startPage_wrapper
+  .startPageWrapper
     height: 985px
 
-  h1
+  .startPage__infoTitle
     font-size: 60px
     text-align: center
     line-height: 70px
     margin-top: 150px
 
-  #startPage_imgs-lemon
+  #lemon
     left: 49px
     top: 604px
     width: 266px
     height: 232px
 
-  #startPage_imgs-nootris
+  #nootris
     bottom: 226px
     left: 244px
     width: 112px
     height: 318px
 
-  #startPage_imgs-ginger
+  #ginger
     bottom: 234px
     left: 157px
     width: 248px
     height: 204px
 
-  .startPage_info
+  .startPage__info
     display: flex
     flex-direction: column
     align-items: center
 
-  .startPage_info-textH1, .startPage_info-textH2, h2
+  .startPage__infoText1, .startPage__infoText2,
+  .startPage__infoSubtitle
     width: 400px
     text-align: center
     margin: 10px 0
 
-  h2
+  .startPage__infoSubtitle
     margin-top: 450px
 
-  h3
+  .salePage__title
     font-size: 26px
     width: 440px
 
-  .salePage_wrapper
-    height: 1175px
+  .salePageWrapper
+    height: 1215px
 
-  .salePage_price
+  .salePage__price
     margin-bottom: 20px
     margin-top: 60px
 
-  .salePage_info
+  .salePage__info
     flex-wrap: wrap
     width: 400px
 
-  #salePage_info-nootris-text1
+  #salePage__info__item__nootris__text1
     margin-top: 85px
     font-size: 34px
 
-  .salePage_info div:nth-child(2)
+  .salePage__info div:nth-child(2)
     order: -1
     margin-bottom: 65px
 
-  .salePage_info-item-text1
+  .salePage__infoItemText1
     margin-top: 20px
 
-  #salePage_info-nootris
+  #salePageNootris
     width: 320px
     height: 107px
 
-  button
+  .salePage__button
     margin-top: 85px
 
 @media (max-width: 479px)
@@ -546,11 +551,10 @@ button
     width: 300px
     justify-content: center
 
-  .header_menu-btn
+  .burger
     display: block
 
-  /* Меню, которое будет появляться */
-  .menu
+  .navListWrapper
     position: fixed
     top: 0
     width: 320px
@@ -560,7 +564,7 @@ button
     transition: transform 0.5s
     left: 0
 
-  ul
+  .navList
     flex-direction: column
     font-weight: 700
     position: relative
@@ -568,91 +572,93 @@ button
     top: 115px
     line-height: 75px
 
-  .startPage_wrapper
+  .startPageWrapper
     height: 900px
 
-  h1
+  .startPage__infoTitle
     font-size: 40px
     text-align: center
     line-height: 60px
     margin-top: 150px
 
-  #startPage_imgs-lemon
+  #lemon
     left: 166px
     top: 519px
     width: 178px
     height: 154px
 
-  #startPage_imgs-nootris
+  #nootris
     bottom: 226px
     left: 285px
     width: 75px
     height: 212px
 
-  #startPage_imgs-ginger
+  #ginger
     bottom: 247px
     left: 224px
     width: 165px
     height: 137px
 
-  .startPage_info
+  .startPage__info
     display: flex
     flex-direction: column
     align-items: center
 
-  .startPage_info-textH1, .startPage_info-textH2, h2
+  .startPage__infoText1, .startPage__infoText2,
+  .startPage__infoSubtitle
     width: 300px
     text-align: center
     margin: 10px 0
 
-  .startPage_info-textH1
+  .startPage__infoText1
     font-size: 17px
     margin-top: 30px
 
-  h2
-    margin-top: 288px
+  .startPage__infoSubtitle
+    margin-top: 345px
+    font-size: 29px
 
-  h3
+  .salePage__title
     font-size: 17px
     width: 300px
     line-height: 30px
     margin-top: 75px
 
-  .salePage_wrapper
-    height: 1250px
+  .salePageWrapper
+    height: 1300px
 
-  .salePage_price
+  .salePage__price
     margin-bottom: 20px
     margin-top: 60px
 
-  .salePage_info
+  .salePage__info
     flex-wrap: wrap
     width: 300px
     display: flex
     flex-direction: column
     align-items: center
 
-  .salePage_info-item
+  .salePage__infoItem
     margin-bottom: 45px
 
-  #salePage_info-nootris-text1
+  #salePage__info__item__nootris__text1
     margin: 75px 0 0
     font-size: 25px
     text-align: center
 
-  .salePage_info div:nth-child(2)
+  .salePage__info div:nth-child(2)
     order: -1
     margin-bottom: 65px
 
-  .salePage_info-item-text1
+  .salePage__infoItemText1
     margin-top: 20px
 
-  #salePage_info-virus-text1
+  #salePage__info__item__virus__text1
     margin-top: 10px
 
-  #salePage_info-nootris
+  #salePageNootris
     width: 299px
     height: 100px
 
-  button
+  .salePage__button
     margin-top: 50px
