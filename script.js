@@ -1,11 +1,12 @@
-let menuBtn = document.querySelector('.header__burger');
-let menu = document.querySelector('.header__nav');
+let menuBtn = document.querySelector('.burger');
+let menu = document.querySelector('.navListWrapper');
 let body = document.querySelector('body');
-let list = document.querySelector('.header__nav__list');
+let list = document.querySelector('.navList');
+
 menuBtn.addEventListener('click', function(){
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
-    body.classList.toggle('isVisible')
+    body.classList.toggle('isVisible');
 })
 
 list.addEventListener('click', function(){

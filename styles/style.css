@@ -26,11 +26,11 @@ header {
   align-items: center;
 }
 
-.header__burger {
+.burger {
   display: none;
 }
 
-.header__burger {
+.burger {
   width: 30px;
   height: 30px;
   position: relative;
@@ -38,7 +38,7 @@ header {
   overflow: hidden;
   top: 5px;
 }
-.header__burger span {
+.burger span {
   width: 30px;
   height: 2px;
   position: absolute;
@@ -48,50 +48,50 @@ header {
   background-color: #FFFFFF;
   transition: all 0.5s;
 }
-.header__burger:hover {
+.burger:hover {
   cursor: pointer;
 }
 
-.header__burger span:nth-of-type(2) {
+.burger span:nth-of-type(2) {
   top: calc(50% - 5px);
 }
 
-.header__burger span:nth-of-type(3) {
+.burger span:nth-of-type(3) {
   top: calc(50% + 5px);
 }
 
-.header__burger.active span:nth-of-type(1) {
+.burger.active span:nth-of-type(1) {
   top: 50%;
   transform: translate(-90%, 0%) rotate(90deg);
 }
 
-.header__burger.active span:nth-of-type(2) {
+.burger.active span:nth-of-type(2) {
   top: 50%;
   transform: translate(-50%, 0%) rotate(90deg);
 }
 
-.header__burger.active span:nth-of-type(3) {
+.burger.active span:nth-of-type(3) {
   top: 50%;
   transform: translate(-10%, 0%) rotate(90deg);
 }
 
-.header__logo {
+.logo {
   position: relative;
   z-index: 10;
 }
-.header__logo:hover {
+.logo:hover {
   cursor: pointer;
 }
 
-.header__nav.active {
+.navListWrapper.active {
   transform: translateX(0);
 }
 
-.header__nav__list__item {
+.navList__item {
   list-style-type: none;
 }
 
-.header__nav__list {
+.navList {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,31 +99,31 @@ header {
   padding-left: 13px;
 }
 
-.header__nav__list__item:hover {
+.navList__item:hover {
   color: #FCDA28;
   cursor: pointer;
 }
 
-.header__nav__list__item__link {
+.navList__link {
   color: #FFFFFF;
 }
-.header__nav__list__item__link:hover {
+.navList__link:hover {
   color: #FCDA28;
   cursor: pointer;
 }
 
-.header__basket {
+.basket {
   position: relative;
 }
-.header__basket:hover {
+.basket:hover {
   cursor: pointer;
 }
 
-.header__basket__img {
+.basket__img {
   margin-right: 22px;
 }
 
-.header__basket__quantity {
+.basket__quantity {
   background: #FCB500;
   color: #111111;
   width: 16px;
@@ -153,7 +153,7 @@ header {
   height: 97px;
 }
 
-.startPage__wrapper {
+.startPageWrapper {
   height: 792px;
   background: #FCDA28;
 }
@@ -164,7 +164,7 @@ header {
   display: flex;
 }
 
-.startPage__info__title {
+.startPage__infoTitle {
   font-size: 144px;
   font-weight: 700;
   line-height: 152px;
@@ -175,7 +175,7 @@ header {
   position: relative;
 }
 
-.startPage__info__text1 {
+.startPage__infoText1 {
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
@@ -183,45 +183,44 @@ header {
   margin-top: 30px;
 }
 
-.startPage__info__subtitle {
+.startPage__infoSubtitle {
   font-size: 36px;
   font-weight: 700;
   line-height: 43px;
   margin-top: 109px;
 }
 
-.startPage__info__text2 {
+.startPage__infoText2 {
   line-height: 21px;
   width: 350px;
   margin-top: 8px;
 }
 
-.startPage__img {
+.startPage__images {
   position: relative;
   right: 430px;
 }
 
-#startPage__img__lemon, #startPage__img__nootris,
-#startPage__img__ginger {
+#lemon, #nootris, #ginger {
   position: absolute;
 }
 
-#startPage__img__lemon {
+#lemon {
   left: -283px;
   top: 441px;
 }
 
-#startPage__img__nootris {
+#nootris {
   bottom: -1px;
   left: 108px;
 }
 
-#startPage__img__ginger {
+#ginger {
   bottom: 15px;
   left: -66px;
 }
 
-.salePage__wrapper {
+.salePageWrapper {
   background: #111111;
   height: 926px;
 }
@@ -254,7 +253,7 @@ header {
   margin-top: 77px;
 }
 
-.salePage__price__old {
+.salePage__oldPrice {
   color: #ADADAD;
   font-size: 36px;
   line-height: 43px;
@@ -263,7 +262,7 @@ header {
   margin-left: 20px;
 }
 
-.salePage__price__new {
+.salePage__newPrice {
   color: #FFFFFF;
   font-size: 48px;
   line-height: 57px;
@@ -278,14 +277,14 @@ header {
   margin-top: 49px;
 }
 
-.salePage__info__item {
+.salePage__infoItem {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-#salePage__info__item__ginger {
+#salePageGinger {
   width: 193px;
   height: 161px;
   margin-top: -8px;
@@ -295,13 +294,13 @@ header {
   padding-right: 6px;
 }
 
-#salePage__info__item__nootris {
+#salePageNootris {
   width: 480px;
   height: 160px;
   margin-bottom: -49px;
 }
 
-#salePage_info__item__virus {
+#salePageVirus {
   width: 192px;
   height: 160px;
 }
@@ -314,13 +313,13 @@ header {
   margin-right: 10px;
 }
 
-.salePage__info__item__text1 {
+.salePage__infoItemText1 {
   color: #FFFFFF;
   text-align: center;
   margin-top: 86px;
 }
 
-.salePage__info__item__text2 {
+.salePage__infoItemText2 {
   color: #FCB500;
   text-align: center;
 }
@@ -351,44 +350,44 @@ header {
   .header {
     width: 960px;
   }
-  .header__nav__list {
+  .navList {
     width: 770px;
     padding: 0;
   }
-  .header__nav__list__item {
+  .navList__item {
     font-size: 16px;
   }
-  .header__basket__img {
+  .basket__img {
     margin: 0;
   }
   .startPage {
     width: 960px;
   }
-  .startPage__info__title {
+  .startPage__infoTitle {
     font-size: 95px;
   }
-  .startPage__info__text1 {
+  .startPage__infoText1 {
     font-size: 18px;
     line-height: 28px;
     width: 495px;
     margin-top: 15px;
   }
-  .startPage__info__text1, .salePage__info__text2 {
+  .startPage__infoText1, .startPage__infoText2 {
     font-size: 16px;
   }
-  .startPage__info__subtitle {
+  .startPage__infoSubtitle {
     margin-top: 90px;
     font-size: 34px;
   }
-  #startPage__img__ginger {
+  #ginger {
     bottom: -19px;
     left: -60px;
   }
-  #startPage__img__nootris {
+  #nootris {
     bottom: -35px;
     left: 140px;
   }
-  #startPage__img__lemon {
+  #lemon {
     left: -252px;
     top: 448px;
   }
@@ -406,7 +405,7 @@ header {
     width: 720px;
     justify-content: space-between;
   }
-  .header__nav {
+  .navListWrapper {
     position: fixed;
     top: 0;
     width: 320px;
@@ -416,7 +415,7 @@ header {
     transition: transform 0.5s;
     left: 0;
   }
-  .header__nav__list {
+  .navList {
     flex-direction: column;
     font-weight: 700;
     position: relative;
@@ -427,46 +426,46 @@ header {
   .startPage {
     width: 740px;
   }
-  .header__burger {
+  .burger {
     display: block;
   }
-  .startPage__info__title {
+  .startPage__infoTitle {
     font-size: 100px;
     text-align: center;
   }
-  #startPage__img__lemon {
+  #lemon {
     left: 76px;
     top: 614px;
     width: 266px;
     height: 232px;
   }
-  #startPage__img__nootris {
+  #nootris {
     bottom: -24px;
     left: 272px;
     width: 112px;
     height: 318px;
   }
-  #startPage__img__ginger {
+  #ginger {
     bottom: -15px;
     left: 184px;
     width: 248px;
     height: 204px;
   }
-  .startPage__info__text1 {
+  .startPage__infoText1 {
     width: 500px;
     padding-left: 35px;
   }
-  .startPage__info__text2, .startPage__info__subtitle {
+  .startPage__infoText2, .startPage__infoSubtitle {
     padding-left: 35px;
   }
-  .startPage__info__subtitle {
+  .startPage__infoSubtitle {
     margin-top: 95px;
   }
   .salePage__title {
     font-size: 35px;
     width: 620px;
   }
-  .salePage__wrapper {
+  .salePageWrapper {
     height: 1175px;
   }
   .salePage__price {
@@ -483,7 +482,7 @@ header {
     order: -1;
     margin-bottom: 50px;
   }
-  .salePage__info__item__text1 {
+  .salePage__infoItemText1 {
     margin-top: 20px;
   }
 }
@@ -496,7 +495,7 @@ header {
   .header {
     width: 420px;
   }
-  .header__nav {
+  .navListWrapper {
     position: fixed;
     top: 0;
     width: 320px;
@@ -509,10 +508,10 @@ header {
   .startPage {
     width: 450px;
   }
-  .header__burger {
+  .burger {
     display: block;
   }
-  .header__nav__list {
+  .navList {
     flex-direction: column;
     font-weight: 700;
     position: relative;
@@ -520,28 +519,28 @@ header {
     top: 115px;
     line-height: 75px;
   }
-  .startPage__wrapper {
+  .startPageWrapper {
     height: 985px;
   }
-  .startPage__info__title {
+  .startPage__infoTitle {
     font-size: 60px;
     text-align: center;
     line-height: 70px;
     margin-top: 150px;
   }
-  #startPage__img__lemon {
+  #lemon {
     left: 49px;
     top: 604px;
     width: 266px;
     height: 232px;
   }
-  #startPage__img__nootris {
+  #nootris {
     bottom: 226px;
     left: 244px;
     width: 112px;
     height: 318px;
   }
-  #startPage__img__ginger {
+  #ginger {
     bottom: 234px;
     left: 157px;
     width: 248px;
@@ -552,20 +551,20 @@ header {
     flex-direction: column;
     align-items: center;
   }
-  .startPage__info__text1, .startPage__info__text2,
-.startPage__info__subtitle {
+  .startPage__infoText1, .startPage__infoText2,
+.startPage__infoSubtitle {
     width: 400px;
     text-align: center;
     margin: 10px 0;
   }
-  .startPage__info__subtitle {
+  .startPage__infoSubtitle {
     margin-top: 450px;
   }
   .salePage__title {
     font-size: 26px;
     width: 440px;
   }
-  .salePage__wrapper {
+  .salePageWrapper {
     height: 1215px;
   }
   .salePage__price {
@@ -576,7 +575,7 @@ header {
     flex-wrap: wrap;
     width: 400px;
   }
-  #salePage__info__nootris__text1 {
+  #salePage__info__item__nootris__text1 {
     margin-top: 85px;
     font-size: 34px;
   }
@@ -584,10 +583,10 @@ header {
     order: -1;
     margin-bottom: 65px;
   }
-  .salePage__info__item__text1 {
+  .salePage__infoItemText1 {
     margin-top: 20px;
   }
-  #salePage__info__item-nootris {
+  #salePageNootris {
     width: 320px;
     height: 107px;
   }
@@ -608,10 +607,10 @@ header {
     width: 300px;
     justify-content: center;
   }
-  .header__burger {
+  .burger {
     display: block;
   }
-  .header__nav {
+  .navListWrapper {
     position: fixed;
     top: 0;
     width: 320px;
@@ -621,7 +620,7 @@ header {
     transition: transform 0.5s;
     left: 0;
   }
-  .header__nav__list {
+  .navList {
     flex-direction: column;
     font-weight: 700;
     position: relative;
@@ -629,28 +628,28 @@ header {
     top: 115px;
     line-height: 75px;
   }
-  .startPage__wrapper {
+  .startPageWrapper {
     height: 900px;
   }
-  .startPage__info__title {
+  .startPage__infoTitle {
     font-size: 40px;
     text-align: center;
     line-height: 60px;
     margin-top: 150px;
   }
-  #startPage__img__lemon {
+  #lemon {
     left: 166px;
     top: 519px;
     width: 178px;
     height: 154px;
   }
-  #startPage__img__nootris {
+  #nootris {
     bottom: 226px;
     left: 285px;
     width: 75px;
     height: 212px;
   }
-  #startPage__img__ginger {
+  #ginger {
     bottom: 247px;
     left: 224px;
     width: 165px;
@@ -661,17 +660,17 @@ header {
     flex-direction: column;
     align-items: center;
   }
-  .startPage__info__text1, .startPage__info__text2,
-.startPage__info__subtitle {
+  .startPage__infoText1, .startPage__infoText2,
+.startPage__infoSubtitle {
     width: 300px;
     text-align: center;
     margin: 10px 0;
   }
-  .startPage__info__text1 {
+  .startPage__infoText1 {
     font-size: 17px;
     margin-top: 30px;
   }
-  .startPage__info__subtitle {
+  .startPage__infoSubtitle {
     margin-top: 345px;
     font-size: 29px;
   }
@@ -681,7 +680,7 @@ header {
     line-height: 30px;
     margin-top: 75px;
   }
-  .salePage__wrapper {
+  .salePageWrapper {
     height: 1300px;
   }
   .salePage__price {
@@ -695,7 +694,7 @@ header {
     flex-direction: column;
     align-items: center;
   }
-  .salePage__info__item {
+  .salePage__infoItem {
     margin-bottom: 45px;
   }
   #salePage__info__item__nootris__text1 {
@@ -707,13 +706,13 @@ header {
     order: -1;
     margin-bottom: 65px;
   }
-  .salePage__info__item__text1 {
+  .salePage__infoItemText1 {
     margin-top: 20px;
   }
   #salePage__info__item__virus__text1 {
     margin-top: 10px;
   }
-  #salePage__info__item__nootris {
+  #salePageNootris {
     width: 299px;
     height: 100px;
   }
