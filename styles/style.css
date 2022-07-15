@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
 * {
@@ -48,20 +47,23 @@ header {
   align-items: center;
 }
 
-.header_logo {
+.header__logo {
   position: relative;
   z-index: 10;
+}
+.header__logo:hover {
+  cursor: pointer;
 }
 
 .header_basket {
   position: relative;
 }
+.header_basket:hover {
+  cursor: pointer;
+}
 
 .header_basket__img {
   margin-right: 22px;
-}
-.header_basket__img:hover {
-  cursor: pointer;
 }
 
 .header_basket__quantity {
@@ -80,11 +82,11 @@ header {
   bottom: -6px;
 }
 
-.header_burger {
+.header__burger {
   display: none;
 }
 
-.header_burger {
+.header__burger {
   width: 30px;
   height: 30px;
   position: relative;
@@ -92,7 +94,7 @@ header {
   overflow: hidden;
   top: 5px;
 }
-.header_burger span {
+.header__burger span {
   width: 30px;
   height: 2px;
   position: absolute;
@@ -103,15 +105,15 @@ header {
   transition: all 0.5s;
 }
 
-.header_burger span:nth-of-type(2) {
+.header__burger span:nth-of-type(2) {
   top: calc(50% - 5px);
 }
 
-.header_burger span:nth-of-type(3) {
+.header__burger span:nth-of-type(3) {
   top: calc(50% + 5px);
 }
 
-.header_nav.active {
+.header__nav.active {
   transform: translateX(0);
 }
 
@@ -119,18 +121,17 @@ header {
   list-style-type: none;
 }
 
-/* Меняем гамбургер иконку, когда меню открыто */
-.header_burger.active span:nth-of-type(1) {
+.header__burger.active span:nth-of-type(1) {
   top: 50%;
   transform: translate(-90%, 0%) rotate(90deg);
 }
 
-.header_burger.active span:nth-of-type(2) {
+.header__burger.active span:nth-of-type(2) {
   top: 50%;
   transform: translate(-50%, 0%) rotate(90deg);
 }
 
-.header_burger.active span:nth-of-type(3) {
+.header__burger.active span:nth-of-type(3) {
   top: 50%;
   transform: translate(-10%, 0%) rotate(90deg);
 }
@@ -217,7 +218,7 @@ header {
   left: -66px;
 }
 
-.salePage_wrapper {
+.salePage__wrapper {
   background: #111111;
   height: 926px;
 }
@@ -392,7 +393,6 @@ header {
     width: 960px;
   }
 }
-/* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
   header {
     position: fixed;
@@ -403,7 +403,7 @@ header {
     width: 720px;
     justify-content: space-between;
   }
-  .header_nav {
+  .header__nav {
     position: fixed;
     top: 0;
     width: 320px;
@@ -424,7 +424,7 @@ header {
   .startPage {
     width: 740px;
   }
-  .header_burger {
+  .header__burger {
     display: block;
   }
   .startPage_info__title {
@@ -463,7 +463,7 @@ header {
     font-size: 35px;
     width: 620px;
   }
-  .salePage_wrapper {
+  .salePage__wrapper {
     height: 1175px;
   }
   .salePage_price {
@@ -493,7 +493,7 @@ header {
   .header {
     width: 420px;
   }
-  .header_nav {
+  .header__nav {
     position: fixed;
     top: 0;
     width: 320px;
@@ -506,7 +506,7 @@ header {
   .startPage {
     width: 450px;
   }
-  .header_burger {
+  .header__burger {
     display: block;
   }
   .header_nav__list {
@@ -562,7 +562,7 @@ header {
     font-size: 26px;
     width: 440px;
   }
-  .salePage_wrapper {
+  .salePage__wrapper {
     height: 1175px;
   }
   .salePage_price {
@@ -605,10 +605,10 @@ header {
     width: 300px;
     justify-content: center;
   }
-  .header_burger {
+  .header__burger {
     display: block;
   }
-  .header_nav {
+  .header__nav {
     position: fixed;
     top: 0;
     width: 320px;
@@ -658,7 +658,7 @@ header {
     flex-direction: column;
     align-items: center;
   }
-  .startPage_info__text1, .startPage_info-textH2,
+  .startPage_info__text1, .startPage_info__text2,
 .startPage_info__subtitle {
     width: 300px;
     text-align: center;
@@ -669,7 +669,8 @@ header {
     margin-top: 30px;
   }
   .startPage_info__subtitle {
-    margin-top: 288px;
+    margin-top: 345px;
+    font-size: 29px;
   }
   .salePage_title {
     font-size: 17px;
@@ -677,8 +678,8 @@ header {
     line-height: 30px;
     margin-top: 75px;
   }
-  .salePage_wrapper {
-    height: 1250px;
+  .salePage__wrapper {
+    height: 1300px;
   }
   .salePage_price {
     margin-bottom: 20px;
@@ -694,7 +695,7 @@ header {
   .salePage_info__item {
     margin-bottom: 45px;
   }
-  #salePage_info-nootris-text1 {
+  #salePage_info__item-nootris-text1 {
     margin: 75px 0 0;
     font-size: 25px;
     text-align: center;
@@ -703,7 +704,7 @@ header {
     order: -1;
     margin-bottom: 65px;
   }
-  .salePage_info-item-text1 {
+  .salePage_info__item-text1 {
     margin-top: 20px;
   }
   #salePage_info__item-virus-text1 {
