@@ -16,22 +16,24 @@ header {
   position: relative;
   z-index: 10;
 }
-header ul {
+
+.header_nav__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 956px;
   padding-left: 13px;
 }
-header ul li:hover {
+
+.header_nav__list__item:hover {
   color: #FCDA28;
   cursor: pointer;
 }
 
-a {
+.header_nav__list__item__link {
   color: #FFFFFF;
 }
-a:hover {
+.header_nav__list__item__link:hover {
   color: #FCDA28;
   cursor: pointer;
 }
@@ -55,10 +57,10 @@ a:hover {
   position: relative;
 }
 
-.header_basket-img {
+.header_basket__img {
   margin-right: 22px;
 }
-.header_basket-img:hover {
+.header_basket__img:hover {
   cursor: pointer;
 }
 
@@ -78,11 +80,11 @@ a:hover {
   bottom: -6px;
 }
 
-.header_menu-btn {
+.header_burger {
   display: none;
 }
 
-.header_menu-btn {
+.header_burger {
   width: 30px;
   height: 30px;
   position: relative;
@@ -90,7 +92,7 @@ a:hover {
   overflow: hidden;
   top: 5px;
 }
-.header_menu-btn span {
+.header_burger span {
   width: 30px;
   height: 2px;
   position: absolute;
@@ -101,34 +103,34 @@ a:hover {
   transition: all 0.5s;
 }
 
-.header_menu-btn span:nth-of-type(2) {
+.header_burger span:nth-of-type(2) {
   top: calc(50% - 5px);
 }
 
-.header_menu-btn span:nth-of-type(3) {
+.header_burger span:nth-of-type(3) {
   top: calc(50% + 5px);
 }
 
-.menu.active {
+.header_nav.active {
   transform: translateX(0);
 }
 
-.menu li {
+.header_nav__list__item {
   list-style-type: none;
 }
 
 /* Меняем гамбургер иконку, когда меню открыто */
-.header_menu-btn.active span:nth-of-type(1) {
+.header_burger.active span:nth-of-type(1) {
   top: 50%;
   transform: translate(-90%, 0%) rotate(90deg);
 }
 
-.header_menu-btn.active span:nth-of-type(2) {
+.header_burger.active span:nth-of-type(2) {
   top: 50%;
   transform: translate(-50%, 0%) rotate(90deg);
 }
 
-.header_menu-btn.active span:nth-of-type(3) {
+.header_burger.active span:nth-of-type(3) {
   top: 50%;
   transform: translate(-10%, 0%) rotate(90deg);
 }
@@ -138,8 +140,11 @@ a:hover {
   position: absolute;
   z-index: 2;
   top: 9px;
+  left: 0;
+  right: 0;
 }
-.separation img {
+
+.separation_img {
   width: 100%;
   height: 97px;
 }
@@ -155,7 +160,7 @@ a:hover {
   display: flex;
 }
 
-h1 {
+.startPage_info__title {
   font-size: 144px;
   font-weight: 700;
   line-height: 152px;
@@ -166,7 +171,7 @@ h1 {
   position: relative;
 }
 
-.startPage_info-textH1 {
+.startPage_info__text1 {
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
@@ -174,40 +179,40 @@ h1 {
   margin-top: 30px;
 }
 
-h2 {
+.startPage_info__subtitle {
   font-size: 36px;
   font-weight: 700;
   line-height: 43px;
   margin-top: 109px;
 }
 
-.startPage_info-textH2 {
+.startPage_info__text2 {
   line-height: 21px;
   width: 350px;
   margin-top: 8px;
 }
 
-.startPage_imgs {
+.startPage_img {
   position: relative;
   right: 430px;
 }
 
-#startPage_imgs-lemon, #startPage_imgs-nootris,
-#startPage_imgs-ginger {
+#startPage_img__lemon, #startPage_img__nootris,
+#startPage_img__ginger {
   position: absolute;
 }
 
-#startPage_imgs-lemon {
+#startPage_img__lemon {
   left: -283px;
   top: 441px;
 }
 
-#startPage_imgs-nootris {
+#startPage_img__nootris {
   bottom: -1px;
   left: 108px;
 }
 
-#startPage_imgs-ginger {
+#startPage_img__ginger {
   bottom: 15px;
   left: -66px;
 }
@@ -224,7 +229,7 @@ h2 {
   align-items: center;
 }
 
-h3 {
+.salePage_title {
   font-size: 48px;
   font-weight: 700;
   line-height: 57px;
@@ -233,7 +238,7 @@ h3 {
   width: 800px;
   margin-top: 112px;
 }
-h3:first-line {
+.salePage_title:first-line {
   color: #FFFFFF;
 }
 
@@ -245,7 +250,7 @@ h3:first-line {
   margin-top: 77px;
 }
 
-.salePage_price-old {
+.salePage_price__old {
   color: #ADADAD;
   font-size: 36px;
   line-height: 43px;
@@ -254,7 +259,7 @@ h3:first-line {
   margin-left: 20px;
 }
 
-.salePage_price-new {
+.salePage_price__new {
   color: #FFFFFF;
   font-size: 48px;
   line-height: 57px;
@@ -269,35 +274,35 @@ h3:first-line {
   margin-top: 49px;
 }
 
-.salePage_info-item {
+.salePage_info__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#salePage_info-ginger {
+#salePage_info__item-ginger {
   width: 193px;
   height: 161px;
   margin-top: -8px;
 }
 
-#salePage_info-ginger-text1 {
+#salePage_info__item-ginger-text1 {
   padding-right: 6px;
 }
 
-#salePage_info-nootris {
+#salePage_info__item-nootris {
   width: 480px;
   height: 160px;
   margin-bottom: -49px;
 }
 
-#salePage_info-virus {
+#salePage_info__item-virus {
   width: 192px;
   height: 160px;
 }
 
-#salePage_info-nootris-text1 {
+#salePage_info__item-nootris-text1 {
   font-size: 36px;
   line-height: 43px;
   text-align: left;
@@ -305,25 +310,25 @@ h3:first-line {
   margin-right: 10px;
 }
 
-#salePage_info-nootris-text2 {
+#salePage_info__item-nootris-text2 {
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   margin-top: 8px;
 }
 
-.salePage_info-item-text1 {
+.salePage_info__item-text1 {
   color: #FFFFFF;
   text-align: center;
   margin-top: 86px;
 }
 
-.salePage_info-item-text2 {
+.salePage_info__item-text2 {
   color: #FCB500;
   text-align: center;
 }
 
-button {
+.salePage_button {
   height: 56px;
   width: 256px;
   border-radius: 7px;
@@ -331,10 +336,10 @@ button {
   line-height: 21.33px;
   margin-top: 66px;
 }
-button:hover {
+.salePage_button:hover {
   background: #FCDA28;
 }
-button:active {
+.salePage_button:active {
   transform: scale(1.1);
 }
 
@@ -342,44 +347,44 @@ button:active {
   .header {
     width: 960px;
   }
-  .header ul {
+  .header_nav__list {
     width: 770px;
     padding: 0;
   }
-  .header ul li {
+  .header_nav__list__item {
     font-size: 16px;
   }
-  .header_basket-img {
+  .header_basket__img {
     margin: 0;
   }
   .startPage {
     width: 960px;
   }
-  h1 {
+  .startPage_info__title {
     font-size: 95px;
   }
-  .startPage_info-textH1 {
+  .startPage_info__text1 {
     font-size: 18px;
     line-height: 28px;
     width: 495px;
     margin-top: 15px;
   }
-  .startPage_info-textH1, .salePage_info-text2 {
+  .startPage_info__text1, .salePage_info-text2 {
     font-size: 16px;
   }
-  h2 {
+  .startPage_info__subtitle {
     margin-top: 90px;
     font-size: 34px;
   }
-  #startPage_imgs-ginger {
+  #startPage_img__ginger {
     bottom: -19px;
     left: -60px;
   }
-  #startPage_imgs-nootris {
+  #startPage_img__nootris {
     bottom: -35px;
     left: 140px;
   }
-  #startPage_imgs-lemon {
+  #startPage_img__lemon {
     left: -252px;
     top: 448px;
   }
@@ -398,8 +403,7 @@ button:active {
     width: 720px;
     justify-content: space-between;
   }
-  /* Меню, которое будет появляться */
-  .menu {
+  .header_nav {
     position: fixed;
     top: 0;
     width: 320px;
@@ -409,7 +413,7 @@ button:active {
     transition: transform 0.5s;
     left: 0;
   }
-  ul {
+  .header_nav__list {
     flex-direction: column;
     font-weight: 700;
     position: relative;
@@ -420,42 +424,42 @@ button:active {
   .startPage {
     width: 740px;
   }
-  .header_menu-btn {
+  .header_burger {
     display: block;
   }
-  h1 {
+  .startPage_info__title {
     font-size: 100px;
     text-align: center;
   }
-  #startPage_imgs-lemon {
+  #startPage_img__lemon {
     left: 76px;
     top: 614px;
     width: 266px;
     height: 232px;
   }
-  #startPage_imgs-nootris {
+  #startPage_img__nootris {
     bottom: -24px;
     left: 272px;
     width: 112px;
     height: 318px;
   }
-  #startPage_imgs-ginger {
+  #startPage_img__ginger {
     bottom: -15px;
     left: 184px;
     width: 248px;
     height: 204px;
   }
-  .startPage_info-textH1 {
+  .startPage_info__text1 {
     width: 500px;
     padding-left: 35px;
   }
-  .startPage_info-textH2, h2 {
+  .startPage_info__text2, .startPage_info__subtitle {
     padding-left: 35px;
   }
-  h2 {
+  .startPage_info__subtitle {
     margin-top: 95px;
   }
-  h3 {
+  .salePage_title {
     font-size: 35px;
     width: 620px;
   }
@@ -476,7 +480,7 @@ button:active {
     order: -1;
     margin-bottom: 50px;
   }
-  .salePage_info-item-text1 {
+  .salePage_info__item-text1 {
     margin-top: 20px;
   }
 }
@@ -489,8 +493,7 @@ button:active {
   .header {
     width: 420px;
   }
-  /* Меню, которое будет появляться */
-  .menu {
+  .header_nav {
     position: fixed;
     top: 0;
     width: 320px;
@@ -503,10 +506,10 @@ button:active {
   .startPage {
     width: 450px;
   }
-  .header_menu-btn {
+  .header_burger {
     display: block;
   }
-  ul {
+  .header_nav__list {
     flex-direction: column;
     font-weight: 700;
     position: relative;
@@ -517,25 +520,25 @@ button:active {
   .startPage_wrapper {
     height: 985px;
   }
-  h1 {
+  .startPage_info__title {
     font-size: 60px;
     text-align: center;
     line-height: 70px;
     margin-top: 150px;
   }
-  #startPage_imgs-lemon {
+  #startPage_img__lemon {
     left: 49px;
     top: 604px;
     width: 266px;
     height: 232px;
   }
-  #startPage_imgs-nootris {
+  #startPage_img__nootris {
     bottom: 226px;
     left: 244px;
     width: 112px;
     height: 318px;
   }
-  #startPage_imgs-ginger {
+  #startPage_img__ginger {
     bottom: 234px;
     left: 157px;
     width: 248px;
@@ -546,15 +549,16 @@ button:active {
     flex-direction: column;
     align-items: center;
   }
-  .startPage_info-textH1, .startPage_info-textH2, h2 {
+  .startPage_info__text1, .startPage_info__text2,
+.startPage_info__subtitle {
     width: 400px;
     text-align: center;
     margin: 10px 0;
   }
-  h2 {
+  .startPage_info__subtitle {
     margin-top: 450px;
   }
-  h3 {
+  .salePage_title {
     font-size: 26px;
     width: 440px;
   }
@@ -577,14 +581,14 @@ button:active {
     order: -1;
     margin-bottom: 65px;
   }
-  .salePage_info-item-text1 {
+  .salePage_info__item-text1 {
     margin-top: 20px;
   }
-  #salePage_info-nootris {
+  #salePage_info__item-nootris {
     width: 320px;
     height: 107px;
   }
-  button {
+  .salePage_button {
     margin-top: 85px;
   }
 }
@@ -601,11 +605,10 @@ button:active {
     width: 300px;
     justify-content: center;
   }
-  .header_menu-btn {
+  .header_burger {
     display: block;
   }
-  /* Меню, которое будет появляться */
-  .menu {
+  .header_nav {
     position: fixed;
     top: 0;
     width: 320px;
@@ -615,7 +618,7 @@ button:active {
     transition: transform 0.5s;
     left: 0;
   }
-  ul {
+  .header_nav__list {
     flex-direction: column;
     font-weight: 700;
     position: relative;
@@ -626,25 +629,25 @@ button:active {
   .startPage_wrapper {
     height: 900px;
   }
-  h1 {
+  .startPage_info__title {
     font-size: 40px;
     text-align: center;
     line-height: 60px;
     margin-top: 150px;
   }
-  #startPage_imgs-lemon {
+  #startPage_img__lemon {
     left: 166px;
     top: 519px;
     width: 178px;
     height: 154px;
   }
-  #startPage_imgs-nootris {
+  #startPage_img__nootris {
     bottom: 226px;
     left: 285px;
     width: 75px;
     height: 212px;
   }
-  #startPage_imgs-ginger {
+  #startPage_img__ginger {
     bottom: 247px;
     left: 224px;
     width: 165px;
@@ -655,19 +658,20 @@ button:active {
     flex-direction: column;
     align-items: center;
   }
-  .startPage_info-textH1, .startPage_info-textH2, h2 {
+  .startPage_info__text1, .startPage_info-textH2,
+.startPage_info__subtitle {
     width: 300px;
     text-align: center;
     margin: 10px 0;
   }
-  .startPage_info-textH1 {
+  .startPage_info__text1 {
     font-size: 17px;
     margin-top: 30px;
   }
-  h2 {
+  .startPage_info__subtitle {
     margin-top: 288px;
   }
-  h3 {
+  .salePage_title {
     font-size: 17px;
     width: 300px;
     line-height: 30px;
@@ -687,7 +691,7 @@ button:active {
     flex-direction: column;
     align-items: center;
   }
-  .salePage_info-item {
+  .salePage_info__item {
     margin-bottom: 45px;
   }
   #salePage_info-nootris-text1 {
@@ -702,14 +706,14 @@ button:active {
   .salePage_info-item-text1 {
     margin-top: 20px;
   }
-  #salePage_info-virus-text1 {
+  #salePage_info__item-virus-text1 {
     margin-top: 10px;
   }
-  #salePage_info-nootris {
+  #salePage_info__item-nootris {
     width: 299px;
     height: 100px;
   }
-  button {
+  .salePage_button {
     margin-top: 50px;
   }
 }

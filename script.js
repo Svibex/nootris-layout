@@ -1,5 +1,5 @@
-let menuBtn = document.querySelector('.header_menu-btn');
-let menu = document.querySelector('.menu');
+let menuBtn = document.querySelector('.header_burger');
+let menu = document.querySelector('.header_nav');
 let body = document.querySelector('body');
 let ul = document.querySelector('ul');
 menuBtn.addEventListener('click', function(){
