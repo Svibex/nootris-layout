@@ -19,8 +19,8 @@ header {
 
 .header_nav__list {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   width: 956px;
   padding-left: 13px;
 }
@@ -44,7 +44,7 @@ header {
   width: 1310px;
   color: #FFFFFF;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -73,8 +73,8 @@ header {
   font-size: 12px;
   font-weight: 700;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: absolute;
   left: 21px;
   bottom: -6px;
@@ -244,9 +244,9 @@ header {
 
 .salePage_price {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 270px;
-  justify-content: space-between;
   margin-top: 77px;
 }
 
@@ -268,17 +268,17 @@ header {
 
 .salePage_info {
   display: flex;
-  justify-content: space-between;
-  width: 1087px;
+  justify-content: center;
   align-items: center;
+  width: 1087px;
   margin-top: 49px;
 }
 
 .salePage_info__item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #salePage_info__item-ginger {

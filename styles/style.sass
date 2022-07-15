@@ -7,6 +7,16 @@ $yellow: #FCDA28
 $grey: #ADADAD
 $orange: #FCB500
 
+@mixin flexible ()
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin flex-space-between ()
+  display: flex
+  justify-content: center
+  align-items: center
+
 *
   font-family: "Rubik", sans-serif
   font-size: 18px
@@ -21,9 +31,7 @@ header
   z-index: 10
 
 .header_nav__list
-  display: flex
-  align-items: center
-  justify-content: space-between
+  @include flex-space-between ()
   width: 956px
   padding-left: 13px
 
@@ -42,9 +50,7 @@ header
   height: 80px
   width: 1310px
   color: $white
-  display: flex
-  justify-content: space-between
-  align-items: center
+  @include flex-space-between ()
 
 .header_logo
   position: relative
@@ -66,9 +72,7 @@ header
   border-radius: 8px
   font-size: 12px
   font-weight: 700
-  display: flex
-  align-items: center
-  justify-content: center
+  @include flexible ()
   position: absolute
   left: 21px
   bottom: -6px
@@ -209,10 +213,8 @@ header
     color: $white
 
 .salePage_price
-  display: flex
-  align-items: center
+  @include flex-space-between ()
   width: 270px
-  justify-content: space-between
   margin-top: 77px
 
 .salePage_price__old
@@ -230,17 +232,13 @@ header
   text-align: left
 
 .salePage_info
-  display: flex
-  justify-content: space-between
+  @include flex-space-between ()
   width: 1087px
-  align-items: center
   margin-top: 49px
 
 .salePage_info__item
-  display: flex
+  @include flexible ()
   flex-direction: column
-  align-items: center
-  justify-content: center
 
 #salePage_info__item-ginger
   width: 193px
