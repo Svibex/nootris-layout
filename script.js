@@ -1,14 +1,14 @@
-let menuBtn = document.querySelector('.header_burger');
-let menu = document.querySelector('.header_nav');
+let menuBtn = document.querySelector('.header__burger');
+let menu = document.querySelector('.header__nav');
 let body = document.querySelector('body');
-let ul = document.querySelector('ul');
+let list = document.querySelector('.header__nav__list');
 menuBtn.addEventListener('click', function(){
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
     body.classList.toggle('isVisible')
 })
 
-ul.addEventListener('click', function(){
+list.addEventListener('click', function(){
     body.classList.remove('isVisible');
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');

@@ -16,27 +16,6 @@ header {
   z-index: 10;
 }
 
-.header_nav__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 956px;
-  padding-left: 13px;
-}
-
-.header_nav__list__item:hover {
-  color: #FCDA28;
-  cursor: pointer;
-}
-
-.header_nav__list__item__link {
-  color: #FFFFFF;
-}
-.header_nav__list__item__link:hover {
-  color: #FCDA28;
-  cursor: pointer;
-}
-
 .header {
   margin: 0 auto;
   height: 80px;
@@ -45,41 +24,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header__logo {
-  position: relative;
-  z-index: 10;
-}
-.header__logo:hover {
-  cursor: pointer;
-}
-
-.header_basket {
-  position: relative;
-}
-.header_basket:hover {
-  cursor: pointer;
-}
-
-.header_basket__img {
-  margin-right: 22px;
-}
-
-.header_basket__quantity {
-  background: #FCB500;
-  color: #111111;
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 21px;
-  bottom: -6px;
 }
 
 .header__burger {
@@ -104,6 +48,9 @@ header {
   background-color: #FFFFFF;
   transition: all 0.5s;
 }
+.header__burger:hover {
+  cursor: pointer;
+}
 
 .header__burger span:nth-of-type(2) {
   top: calc(50% - 5px);
@@ -111,14 +58,6 @@ header {
 
 .header__burger span:nth-of-type(3) {
   top: calc(50% + 5px);
-}
-
-.header__nav.active {
-  transform: translateX(0);
-}
-
-.header_nav__list__item {
-  list-style-type: none;
 }
 
 .header__burger.active span:nth-of-type(1) {
@@ -136,6 +75,70 @@ header {
   transform: translate(-10%, 0%) rotate(90deg);
 }
 
+.header__logo {
+  position: relative;
+  z-index: 10;
+}
+.header__logo:hover {
+  cursor: pointer;
+}
+
+.header__nav.active {
+  transform: translateX(0);
+}
+
+.header__nav__list__item {
+  list-style-type: none;
+}
+
+.header__nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 956px;
+  padding-left: 13px;
+}
+
+.header__nav__list__item:hover {
+  color: #FCDA28;
+  cursor: pointer;
+}
+
+.header__nav__list__item__link {
+  color: #FFFFFF;
+}
+.header__nav__list__item__link:hover {
+  color: #FCDA28;
+  cursor: pointer;
+}
+
+.header__basket {
+  position: relative;
+}
+.header__basket:hover {
+  cursor: pointer;
+}
+
+.header__basket__img {
+  margin-right: 22px;
+}
+
+.header__basket__quantity {
+  background: #FCB500;
+  color: #111111;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 21px;
+  bottom: -6px;
+}
+
 .separation {
   height: 97px;
   position: absolute;
@@ -145,12 +148,12 @@ header {
   right: 0;
 }
 
-.separation_img {
+.separation__img {
   width: 100%;
   height: 97px;
 }
 
-.startPage_wrapper {
+.startPage__wrapper {
   height: 792px;
   background: #FCDA28;
 }
@@ -161,7 +164,7 @@ header {
   display: flex;
 }
 
-.startPage_info__title {
+.startPage__info__title {
   font-size: 144px;
   font-weight: 700;
   line-height: 152px;
@@ -172,7 +175,7 @@ header {
   position: relative;
 }
 
-.startPage_info__text1 {
+.startPage__info__text1 {
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
@@ -180,40 +183,40 @@ header {
   margin-top: 30px;
 }
 
-.startPage_info__subtitle {
+.startPage__info__subtitle {
   font-size: 36px;
   font-weight: 700;
   line-height: 43px;
   margin-top: 109px;
 }
 
-.startPage_info__text2 {
+.startPage__info__text2 {
   line-height: 21px;
   width: 350px;
   margin-top: 8px;
 }
 
-.startPage_img {
+.startPage__img {
   position: relative;
   right: 430px;
 }
 
-#startPage_img__lemon, #startPage_img__nootris,
-#startPage_img__ginger {
+#startPage__img__lemon, #startPage__img__nootris,
+#startPage__img__ginger {
   position: absolute;
 }
 
-#startPage_img__lemon {
+#startPage__img__lemon {
   left: -283px;
   top: 441px;
 }
 
-#startPage_img__nootris {
+#startPage__img__nootris {
   bottom: -1px;
   left: 108px;
 }
 
-#startPage_img__ginger {
+#startPage__img__ginger {
   bottom: 15px;
   left: -66px;
 }
@@ -230,7 +233,7 @@ header {
   align-items: center;
 }
 
-.salePage_title {
+.salePage__title {
   font-size: 48px;
   font-weight: 700;
   line-height: 57px;
@@ -239,11 +242,11 @@ header {
   width: 800px;
   margin-top: 112px;
 }
-.salePage_title:first-line {
+.salePage__title:first-line {
   color: #FFFFFF;
 }
 
-.salePage_price {
+.salePage__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -251,7 +254,7 @@ header {
   margin-top: 77px;
 }
 
-.salePage_price__old {
+.salePage__price__old {
   color: #ADADAD;
   font-size: 36px;
   line-height: 43px;
@@ -260,14 +263,14 @@ header {
   margin-left: 20px;
 }
 
-.salePage_price__new {
+.salePage__price__new {
   color: #FFFFFF;
   font-size: 48px;
   line-height: 57px;
   text-align: left;
 }
 
-.salePage_info {
+.salePage__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -275,35 +278,35 @@ header {
   margin-top: 49px;
 }
 
-.salePage_info__item {
+.salePage__info__item {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-#salePage_info__item-ginger {
+#salePage__info__item__ginger {
   width: 193px;
   height: 161px;
   margin-top: -8px;
 }
 
-#salePage_info__item-ginger-text1 {
+#salePage__info__item__ginger__text1 {
   padding-right: 6px;
 }
 
-#salePage_info__item-nootris {
+#salePage__info__item__nootris {
   width: 480px;
   height: 160px;
   margin-bottom: -49px;
 }
 
-#salePage_info__item-virus {
+#salePage_info__item__virus {
   width: 192px;
   height: 160px;
 }
 
-#salePage_info__item-nootris-text1 {
+#salePage__info__item__nootris__text1 {
   font-size: 36px;
   line-height: 43px;
   text-align: left;
@@ -311,25 +314,25 @@ header {
   margin-right: 10px;
 }
 
-#salePage_info__item-nootris-text2 {
+.salePage__info__item__text1 {
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 86px;
+}
+
+.salePage__info__item__text2 {
+  color: #FCB500;
+  text-align: center;
+}
+
+#salePage__info__item__nootris__text2 {
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   margin-top: 8px;
 }
 
-.salePage_info__item-text1 {
-  color: #FFFFFF;
-  text-align: center;
-  margin-top: 86px;
-}
-
-.salePage_info__item-text2 {
-  color: #FCB500;
-  text-align: center;
-}
-
-.salePage_button {
+.salePage__button {
   height: 56px;
   width: 256px;
   border-radius: 7px;
@@ -337,10 +340,10 @@ header {
   line-height: 21.33px;
   margin-top: 66px;
 }
-.salePage_button:hover {
+.salePage__button:hover {
   background: #FCDA28;
 }
-.salePage_button:active {
+.salePage__button:active {
   transform: scale(1.1);
 }
 
@@ -348,48 +351,48 @@ header {
   .header {
     width: 960px;
   }
-  .header_nav__list {
+  .header__nav__list {
     width: 770px;
     padding: 0;
   }
-  .header_nav__list__item {
+  .header__nav__list__item {
     font-size: 16px;
   }
-  .header_basket__img {
+  .header__basket__img {
     margin: 0;
   }
   .startPage {
     width: 960px;
   }
-  .startPage_info__title {
+  .startPage__info__title {
     font-size: 95px;
   }
-  .startPage_info__text1 {
+  .startPage__info__text1 {
     font-size: 18px;
     line-height: 28px;
     width: 495px;
     margin-top: 15px;
   }
-  .startPage_info__text1, .salePage_info-text2 {
+  .startPage__info__text1, .salePage__info__text2 {
     font-size: 16px;
   }
-  .startPage_info__subtitle {
+  .startPage__info__subtitle {
     margin-top: 90px;
     font-size: 34px;
   }
-  #startPage_img__ginger {
+  #startPage__img__ginger {
     bottom: -19px;
     left: -60px;
   }
-  #startPage_img__nootris {
+  #startPage__img__nootris {
     bottom: -35px;
     left: 140px;
   }
-  #startPage_img__lemon {
+  #startPage__img__lemon {
     left: -252px;
     top: 448px;
   }
-  .salePage_info {
+  .salePage__info {
     width: 960px;
   }
 }
@@ -413,7 +416,7 @@ header {
     transition: transform 0.5s;
     left: 0;
   }
-  .header_nav__list {
+  .header__nav__list {
     flex-direction: column;
     font-weight: 700;
     position: relative;
@@ -427,60 +430,60 @@ header {
   .header__burger {
     display: block;
   }
-  .startPage_info__title {
+  .startPage__info__title {
     font-size: 100px;
     text-align: center;
   }
-  #startPage_img__lemon {
+  #startPage__img__lemon {
     left: 76px;
     top: 614px;
     width: 266px;
     height: 232px;
   }
-  #startPage_img__nootris {
+  #startPage__img__nootris {
     bottom: -24px;
     left: 272px;
     width: 112px;
     height: 318px;
   }
-  #startPage_img__ginger {
+  #startPage__img__ginger {
     bottom: -15px;
     left: 184px;
     width: 248px;
     height: 204px;
   }
-  .startPage_info__text1 {
+  .startPage__info__text1 {
     width: 500px;
     padding-left: 35px;
   }
-  .startPage_info__text2, .startPage_info__subtitle {
+  .startPage__info__text2, .startPage__info__subtitle {
     padding-left: 35px;
   }
-  .startPage_info__subtitle {
+  .startPage__info__subtitle {
     margin-top: 95px;
   }
-  .salePage_title {
+  .salePage__title {
     font-size: 35px;
     width: 620px;
   }
   .salePage__wrapper {
     height: 1175px;
   }
-  .salePage_price {
+  .salePage__price {
     margin-bottom: 20px;
   }
-  .salePage_info {
+  .salePage__info {
     flex-wrap: wrap;
     width: 500px;
   }
-  #salePage_info-nootris-text1 {
+  #salePage__info__nootris__text1 {
     margin-top: 85px;
   }
-  .salePage_info div:nth-child(2) {
+  .salePage__info div:nth-child(2) {
     order: -1;
     margin-bottom: 50px;
   }
-  .salePage_info__item-text1 {
+  .salePage__info__item__text1 {
     margin-top: 20px;
   }
 }
@@ -509,7 +512,7 @@ header {
   .header__burger {
     display: block;
   }
-  .header_nav__list {
+  .header__nav__list {
     flex-direction: column;
     font-weight: 700;
     position: relative;
@@ -517,78 +520,78 @@ header {
     top: 115px;
     line-height: 75px;
   }
-  .startPage_wrapper {
+  .startPage__wrapper {
     height: 985px;
   }
-  .startPage_info__title {
+  .startPage__info__title {
     font-size: 60px;
     text-align: center;
     line-height: 70px;
     margin-top: 150px;
   }
-  #startPage_img__lemon {
+  #startPage__img__lemon {
     left: 49px;
     top: 604px;
     width: 266px;
     height: 232px;
   }
-  #startPage_img__nootris {
+  #startPage__img__nootris {
     bottom: 226px;
     left: 244px;
     width: 112px;
     height: 318px;
   }
-  #startPage_img__ginger {
+  #startPage__img__ginger {
     bottom: 234px;
     left: 157px;
     width: 248px;
     height: 204px;
   }
-  .startPage_info {
+  .startPage__info {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .startPage_info__text1, .startPage_info__text2,
-.startPage_info__subtitle {
+  .startPage__info__text1, .startPage__info__text2,
+.startPage__info__subtitle {
     width: 400px;
     text-align: center;
     margin: 10px 0;
   }
-  .startPage_info__subtitle {
+  .startPage__info__subtitle {
     margin-top: 450px;
   }
-  .salePage_title {
+  .salePage__title {
     font-size: 26px;
     width: 440px;
   }
   .salePage__wrapper {
-    height: 1175px;
+    height: 1215px;
   }
-  .salePage_price {
+  .salePage__price {
     margin-bottom: 20px;
     margin-top: 60px;
   }
-  .salePage_info {
+  .salePage__info {
     flex-wrap: wrap;
     width: 400px;
   }
-  #salePage_info-nootris-text1 {
+  #salePage__info__nootris__text1 {
     margin-top: 85px;
     font-size: 34px;
   }
-  .salePage_info div:nth-child(2) {
+  .salePage__info div:nth-child(2) {
     order: -1;
     margin-bottom: 65px;
   }
-  .salePage_info__item-text1 {
+  .salePage__info__item__text1 {
     margin-top: 20px;
   }
-  #salePage_info__item-nootris {
+  #salePage__info__item-nootris {
     width: 320px;
     height: 107px;
   }
-  .salePage_button {
+  .salePage__button {
     margin-top: 85px;
   }
 }
@@ -618,7 +621,7 @@ header {
     transition: transform 0.5s;
     left: 0;
   }
-  .header_nav__list {
+  .header__nav__list {
     flex-direction: column;
     font-weight: 700;
     position: relative;
@@ -626,53 +629,53 @@ header {
     top: 115px;
     line-height: 75px;
   }
-  .startPage_wrapper {
+  .startPage__wrapper {
     height: 900px;
   }
-  .startPage_info__title {
+  .startPage__info__title {
     font-size: 40px;
     text-align: center;
     line-height: 60px;
     margin-top: 150px;
   }
-  #startPage_img__lemon {
+  #startPage__img__lemon {
     left: 166px;
     top: 519px;
     width: 178px;
     height: 154px;
   }
-  #startPage_img__nootris {
+  #startPage__img__nootris {
     bottom: 226px;
     left: 285px;
     width: 75px;
     height: 212px;
   }
-  #startPage_img__ginger {
+  #startPage__img__ginger {
     bottom: 247px;
     left: 224px;
     width: 165px;
     height: 137px;
   }
-  .startPage_info {
+  .startPage__info {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .startPage_info__text1, .startPage_info__text2,
-.startPage_info__subtitle {
+  .startPage__info__text1, .startPage__info__text2,
+.startPage__info__subtitle {
     width: 300px;
     text-align: center;
     margin: 10px 0;
   }
-  .startPage_info__text1 {
+  .startPage__info__text1 {
     font-size: 17px;
     margin-top: 30px;
   }
-  .startPage_info__subtitle {
+  .startPage__info__subtitle {
     margin-top: 345px;
     font-size: 29px;
   }
-  .salePage_title {
+  .salePage__title {
     font-size: 17px;
     width: 300px;
     line-height: 30px;
@@ -681,40 +684,40 @@ header {
   .salePage__wrapper {
     height: 1300px;
   }
-  .salePage_price {
+  .salePage__price {
     margin-bottom: 20px;
     margin-top: 60px;
   }
-  .salePage_info {
+  .salePage__info {
     flex-wrap: wrap;
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .salePage_info__item {
+  .salePage__info__item {
     margin-bottom: 45px;
   }
-  #salePage_info__item-nootris-text1 {
+  #salePage__info__item__nootris__text1 {
     margin: 75px 0 0;
     font-size: 25px;
     text-align: center;
   }
-  .salePage_info div:nth-child(2) {
+  .salePage__info div:nth-child(2) {
     order: -1;
     margin-bottom: 65px;
   }
-  .salePage_info__item-text1 {
+  .salePage__info__item__text1 {
     margin-top: 20px;
   }
-  #salePage_info__item-virus-text1 {
+  #salePage__info__item__virus__text1 {
     margin-top: 10px;
   }
-  #salePage_info__item-nootris {
+  #salePage__info__item__nootris {
     width: 299px;
     height: 100px;
   }
-  .salePage_button {
+  .salePage__button {
     margin-top: 50px;
   }
 }
